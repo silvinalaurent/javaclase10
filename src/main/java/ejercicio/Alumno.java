@@ -5,14 +5,17 @@ import java.util.List;
 public class Alumno {
 	final String nombre;
 	final String legajo;
-	final List<String> materias_aprobadas=new ArrayList<String>();
+	final ArrayList<String> materias_aprobadas=new ArrayList<String>();
 	
-	public Alumno(String nombre, String legajo, List materias_aprobadas)
+	public Alumno(String nombre, String legajo, ArrayList<String> mat_aprobadas)
 	{
 		this.nombre=nombre;
 		this.legajo=legajo;
-		materias_aprobadas=materias_aprobadas;
-				
+		
+		for(String ma:mat_aprobadas)
+		{
+			materias_aprobadas.add(ma);
+		}		
 	}
 
 	public String getNombre() {

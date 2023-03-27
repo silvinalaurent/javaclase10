@@ -6,10 +6,13 @@ public class Materia {
 	final String nombre;
 	final ArrayList<String> correlativas=new ArrayList<String>();
 	
-	public Materia(String n, ArrayList c) 
+	public Materia(String n, ArrayList<String> c) 
 	{
 		this.nombre = n;
-		ArrayList<String> correlativas = (ArrayList) c.clone();
+		for(String corre:c)
+		{
+			correlativas.add(corre);
+		}
 	
 		
 	}
